@@ -1,6 +1,6 @@
 import { Section } from "./Section";
 import { Button } from "./ui/button";
-import { Github, Linkedin, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Mail, Twitter, Facebook, Instagram, WhatsApp } from "lucide-react";
 
 const socialLinks = [
   {
@@ -17,6 +17,21 @@ const socialLinks = [
     name: "Twitter",
     url: "https://twitter.com/yourusername",
     icon: Twitter,
+  },
+  {
+    name: "Facebook",
+    url: "https://facebook.com/yourusername",
+    icon: Facebook,
+  },
+  {
+    name: "Instagram",
+    url: "https://instagram.com/yourusername",
+    icon: Instagram,
+  },
+  {
+    name: "WhatsApp",
+    url: "https://wa.me/yournumber",
+    icon: WhatsApp,
   },
   {
     name: "Email",
