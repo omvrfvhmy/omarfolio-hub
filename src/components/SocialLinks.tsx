@@ -5,37 +5,37 @@ import { Github, Linkedin, Mail, Twitter, Facebook, Instagram, MessageCircle } f
 const socialLinks = [
   {
     name: "GitHub",
-    url: "https://github.com/yourusername",
+    url: "https://github.com/omvrfvhmy",
     icon: Github,
   },
   {
     name: "LinkedIn",
-    url: "https://linkedin.com/in/yourusername",
+    url: "https://www.linkedin.com/in/omar-fahmy-5a7787255/",
     icon: Linkedin,
   },
   {
     name: "Twitter",
-    url: "https://twitter.com/yourusername",
+    url: "https://twitter.com/omvrfvhmy",
     icon: Twitter,
   },
   {
     name: "Facebook",
-    url: "https://facebook.com/yourusername",
+    url: "https://www.facebook.com/omvrfvhmy/",
     icon: Facebook,
   },
   {
     name: "Instagram",
-    url: "https://instagram.com/yourusername",
+    url: "https://instagram.com/omvrfvhmy",
     icon: Instagram,
   },
   {
     name: "WhatsApp",
-    url: "https://wa.me/yournumber",
+    url: "https://wa.me/01274712755",
     icon: MessageCircle,
   },
   {
     name: "Email",
-    url: "mailto:your.email@example.com",
+    url: "mailto:omaffhj@gmail.com",
     icon: Mail,
   },
 ];
