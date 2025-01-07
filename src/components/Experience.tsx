@@ -3,9 +3,9 @@ import { Card } from "./ui/card";
 
 const experiences = [
   {
-    title: "Mobile Application Developer",
-    company: "Company Name",
-    period: "2020 - Present",
+    title: "Second Lead",
+    company: "Google DSc BHI",
+    period: "2023- 2024",
     description: "Led development of mobile applications using Flutter and Firebase.",
   },
   // Add more experiences here
