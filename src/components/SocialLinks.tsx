@@ -1,6 +1,6 @@
 import { Section } from "./Section";
 import { Button } from "./ui/button";
-import { Github, Linkedin, Mail, Twitter, Facebook, Instagram, WhatsApp } from "lucide-react";
+import { Github, Linkedin, Mail, Twitter, Facebook, Instagram, MessageCircle } from "lucide-react";
 
 const socialLinks = [
   {
@@ -31,7 +31,7 @@ const socialLinks = [
   {
     name: "WhatsApp",
     url: "https://wa.me/yournumber",
-    icon: WhatsApp,
+    icon: MessageCircle,
   },
   {
     name: "Email",
