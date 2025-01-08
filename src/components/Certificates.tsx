@@ -16,6 +16,14 @@ const certificates = [
     date: "2023",
     credential: "UC-06111bc1-9b5d-4fa1-b1f5-7d32ca6495663",
   },
+
+  {
+    title: "Complete Flutter & Dart Development Course",
+    issuer: "Udemy",
+    date: "2023",
+    credential: "UC-9a56593a-530e-4b59-8c68-96e77fcf7151",
+  },
+
   // Add more certificates here
 ];
 
