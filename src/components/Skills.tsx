@@ -4,12 +4,13 @@ import { Card } from "@/components/ui/card";
 
 const technicalSkills = [
   "Flutter", "Dart", "Firebase", "REST APIs", "Git",
-  "Clean Architecture", "State Management", "UI/UX Design",
+  "Clean Architecture", "State Management", "UI/UX Design","MS Office , Google Spreadsheets",
 ];
 
 const softSkills = [
   "Problem Solving", "Team Leadership", "Communication",
-  "Time Management", "Adaptability", "Critical Thinking",
+  "Time Management", "Adaptability", "Critical Thinking","Product Managment", 
+  "Teamwork","Public Relations","Event Planning","Marketing","Community Development", "Critical Thinking", 
 ];
 
 export const Skills = () => {
