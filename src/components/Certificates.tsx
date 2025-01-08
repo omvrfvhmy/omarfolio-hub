@@ -24,6 +24,12 @@ const certificates = [
     credential: "UC-9a56593a-530e-4b59-8c68-96e77fcf7151",
   },
 
+  {
+    title: "Certificate of Completion 2023 - 2024 GDSC Core Member",
+    issuer: "Google DSC",
+    date: "2024",
+
+  },
   // Add more certificates here
 ];
 
