@@ -6,10 +6,17 @@ import { Github, Globe } from "lucide-react";
 
 const projects = [
   {
-    title: "Project Name",
-    description: "Description of the project",
-    technologies: ["Flutter", "Firebase", "REST APIs"],
-    githubUrl: "#",
+    title: "History Verse",
+    description: "a mobile application serving as an automatic museum guide",
+    technologies: ["jetpack compose", "Firebase", "REST APIs", "Gemini" , "AWS EC2"],
+    githubUrl: "https://github.com/yassenRamadan1/HistoryVerse",
+    liveUrl: "#",
+  },
+  {
+    title: "POS system",
+    description: "Web Application For a Complete POS System for restaurants",
+    technologies: ["Flutter", "Firebase", "laravel"],
+    githubUrl: "https://github.com/yassenRamadan1/HistoryVerse",
     liveUrl: "#",
   },
   // Add more projects here
