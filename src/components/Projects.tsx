@@ -8,7 +8,7 @@ const projects = [
   {
     title: "History Verse",
     description: "a mobile application serving as an automatic museum guide",
-    technologies: ["jetpack compose", "Firebase", "REST APIs", "Gemini" , "AWS EC2"],
+    technologies: ["jetpack compose","AR",   "Firebase", "REST APIs",".net Framework" ,  "Django" ,"Flask" ,"Google Cloud" ,  "Yolo", "TensorFlow","LLaMa","Gemini", "LangChain + Chroma", "Hugging Face", "VPS" ,"EC2" ,"S3" ,"Route 53" , ],
     githubUrl: "https://github.com/yassenRamadan1/HistoryVerse",
     liveUrl: "#",
   },
