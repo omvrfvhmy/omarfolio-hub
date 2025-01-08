@@ -1,23 +1,43 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Twitter, Facebook, Instagram, MessageCircle } from "lucide-react";
 
 export const SocialLinks = () => {
   const socialLinks = [
     {
       name: "GitHub",
       icon: Github,
-      url: "https://github.com/yourusername",
+      url: "https://github.com/omvrfvhmy",
     },
     {
       name: "LinkedIn",
       icon: Linkedin,
-      url: "https://linkedin.com/in/yourusername",
+      url: "https://linkedin.com/in/omar-fahmy-5a7787255",
+    },
+    {
+      name: "Twitter",
+      icon: Twitter,
+      url: "https://twitter.com/omvrfvhmy",
+    },
+    {
+      name: "Facebook",
+      icon: Facebook,
+      url: "https://www.facebook.com/omvrfvhmy",
+    },
+    {
+      name: "Instagram",
+      icon: Instagram,
+      url: "https://instagram.com/omvrfvhmy",
+    },
+    {
+      name: "WhatsApp",
+      icon: MessageCircle,
+      url: "https://wa.me/+201274712755",
     },
     {
       name: "Email",
       icon: Mail,
-      url: "mailto:your.email@example.com",
+      url: "mailto:omaffhj@gmail.com",
     },
   ];
 
