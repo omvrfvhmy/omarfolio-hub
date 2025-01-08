@@ -5,7 +5,6 @@ import { Projects } from "@/components/Projects";
 import { Certificates } from "@/components/Certificates";
 import { Languages } from "@/components/Languages";
 import { SocialLinks } from "@/components/SocialLinks";
-import { ContactForm } from "@/components/ContactForm";
 
 const Index = () => {
   return (
@@ -17,7 +16,6 @@ const Index = () => {
       <Certificates />
       <Languages />
       <SocialLinks />
-      <ContactForm />
     </div>
   );
 };
