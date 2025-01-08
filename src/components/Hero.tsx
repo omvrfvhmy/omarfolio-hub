@@ -14,7 +14,7 @@ export const Hero = () => {
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.3 }}
           className="text-5xl md:text-7xl font-bold text-foreground"
         >
           Omar Fahmy
@@ -22,7 +22,7 @@ export const Hero = () => {
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          transition={{ duration: 0.3, delay: 0.2 }}
           className="text-xl md:text-2xl text-secondary"
         >
           Mobile Application Developer
@@ -31,15 +31,15 @@ export const Hero = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
+          transition={{ duration: 0.3, delay: 0.4 }}
           className="mt-8"
         >
           <Button 
             onClick={scrollToConnect}
-            className="bg-primary hover:bg-primary/90 text-primary-foreground"
+            className="bg-primary hover:bg-primary/90 text-primary-foreground group"
           >
             Connect With Me
-            <ArrowDown className="ml-2 h-4 w-4" />
+            <ArrowDown className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-y-1" />
           </Button>
         </motion.div>
       </div>

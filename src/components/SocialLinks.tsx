@@ -1,69 +1,57 @@
-import { Section } from "./Section";
-import { Button } from "./ui/button";
-import { Github, Linkedin, Mail, Twitter, Facebook, Instagram, MessageCircle } from "lucide-react";
-
-const socialLinks = [
-  {
-    name: "GitHub",
-    url: "https://github.com/omvrfvhmy",
-    icon: Github,
-  },
-  {
-    name: "LinkedIn",
-    url: "https://www.linkedin.com/in/omar-fahmy-5a7787255/",
-    icon: Linkedin,
-  },
-  {
-    name: "Twitter",
-    url: "https://twitter.com/omvrfvhmy",
-    icon: Twitter,
-  },
-  {
-    name: "Facebook",
-    url: "https://www.facebook.com/omvrfvhmy/",
-    icon: Facebook,
-  },
-  {
-    name: "Instagram",
-    url: "https://instagram.com/omvrfvhmy",
-    icon: Instagram,
-  },
-  {
-    name: "WhatsApp",
-    url: "https://wa.me/+201274712755",
-    icon: MessageCircle,
-  },
-  {
-    name: "Email",
-    url: "mailto:omaffhj@gmail.com",
-    icon: Mail,
-  },
-];
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 export const SocialLinks = () => {
+  const socialLinks = [
+    {
+      name: "GitHub",
+      icon: Github,
+      url: "https://github.com/yourusername",
+    },
+    {
+      name: "LinkedIn",
+      icon: Linkedin,
+      url: "https://linkedin.com/in/yourusername",
+    },
+    {
+      name: "Email",
+      icon: Mail,
+      url: "mailto:your.email@example.com",
+    },
+  ];
+
   return (
-    <Section id="social" title="Connect With Me">
-      <div className="flex flex-wrap gap-4 justify-center">
-        {socialLinks.map((link) => (
-          <Button
-            key={link.name}
-            variant="outline"
-            size="lg"
-            className="glass-card"
-            asChild
-          >
-            <a
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2"
+    <section id="social" className="section-container">
+      <h2 className="section-heading">Let's Connect</h2>
+      <div className="flex flex-wrap justify-center gap-6">
+        {socialLinks.map((link) => {
+          const Icon = link.icon;
+          return (
+            <motion.div
+              key={link.name}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              className="group"
             >
-              <link.icon className="w-5 h-5" />
-              {link.name}
-            </a>
-          </Button>
-        ))}
+              <a
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="w-12 h-12 rounded-full"
+                >
+                  <Icon className="w-6 h-6 transition-transform duration-300 group-hover:rotate-12" />
+                </Button>
+              </a>
+            </motion.div>
+          );
+        })}
       </div>
-    </Section>
+    </section>
   );
 };
