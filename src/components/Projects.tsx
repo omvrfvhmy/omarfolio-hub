@@ -16,7 +16,7 @@ const projects = [
     title: "POS system",
     description: "Web Application For a Complete POS System for restaurants",
     technologies: ["Flutter", "Firebase", "laravel"],
-    githubUrl: "https://github.com/yassenRamadan1/HistoryVerse",
+    githubUrl: "#",
     liveUrl: "#",
   },
   // Add more projects here
