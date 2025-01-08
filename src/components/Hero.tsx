@@ -2,12 +2,21 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 
-const TechIcon = ({ name, className }: { name: string; className?: string }) => (
+const TechIcon = ({ 
+  name, 
+  className,
+  style 
+}: { 
+  name: string; 
+  className?: string;
+  style?: React.CSSProperties;
+}) => (
   <motion.div
     initial={{ opacity: 0, scale: 0.5 }}
     animate={{ opacity: 1, scale: 1 }}
     transition={{ duration: 0.5 }}
     className={`p-4 glass-card hover:scale-110 transition-transform cursor-pointer ${className}`}
+    style={style}
   >
     <img src={`/tech/${name}.svg`} alt={name} className="w-8 h-8" />
   </motion.div>
