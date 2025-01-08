@@ -25,7 +25,7 @@ const certificates = [
   },
 
   {
-    title: "Certificate of Completion 2023 - 2024 GDSC Core Member",
+    title: "Certificate of Completion 2023 - 2024 GDSC Second Lead",
     issuer: "Google DSC",
     date: "2024",
     credential: "N/A",
