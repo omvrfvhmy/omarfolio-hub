@@ -4,10 +4,17 @@ import { Badge } from "./ui/badge";
 
 const certificates = [
   {
-    title: "Certificate Name",
-    issuer: "Issuing Organization",
+    title: "Best graduate from Mobile application development track",
+    issuer: "HackerRank, AUFC",
     date: "2023",
-    credential: "ABC123",
+    
+  },
+
+  {
+    title: "The complete Dart Learning Guide",
+    issuer: "Udemy",
+    date: "2023",
+    credential: "UC-06111bc1-9b5d-4fa1-b1f5-7d32ca6495663",
   },
   // Add more certificates here
 ];
