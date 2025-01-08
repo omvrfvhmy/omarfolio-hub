@@ -7,7 +7,7 @@ const certificates = [
     title: "Best graduate from Mobile application development track",
     issuer: "HackerRank, AUFC",
     date: "2023",
-    
+    credential: "N/A",
   },
 
   {
@@ -28,7 +28,7 @@ const certificates = [
     title: "Certificate of Completion 2023 - 2024 GDSC Core Member",
     issuer: "Google DSC",
     date: "2024",
-
+    credential: "N/A",
   },
   // Add more certificates here
 ];
