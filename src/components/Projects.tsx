@@ -10,7 +10,7 @@ const projects = [
     description: "a mobile application serving as an automatic museum guide",
     technologies: ["jetpack compose","AR",   "Firebase", "REST APIs",".net Framework" ,  "Django" ,"Flask" ,"Google Cloud" ,  "Yolo", "TensorFlow","LLaMa","Gemini", "LangChain + Chroma", "Hugging Face", "VPS" ,"EC2" ,"S3" ,"Route 53" , ],
     githubUrl: "https://github.com/yassenRamadan1/HistoryVerse",
-    liveUrl: "#https://www.canva.com/design/DAF96GA77sg/OYadVyZRb9aq8eY-flpN1g/view?utm_content=DAF96GA77sg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hdc6cbc1e79",
+    liveUrl: "https://www.canva.com/design/DAF96GA77sg/OYadVyZRb9aq8eY-flpN1g/view?utm_content=DAF96GA77sg&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hdc6cbc1e79",
   },
   {
     title: "POS system",
