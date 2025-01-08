@@ -5,7 +5,7 @@ const experiences = [
 
   {
     title: "Program Manager& EventPlanner& Organizer",
-    company: "Google Developer Groupr New Cairo",
+    company: "Google Developer Groups New Cairo",
     period: "2024- Present",
   },
   
