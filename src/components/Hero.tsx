@@ -30,7 +30,7 @@ export const Hero = () => {
           className="mb-8"
         >
           <Avatar className="w-48 h-48 mx-auto border-4 border-primary/50 animate-glow">
-            <AvatarImage src="/omar-profile.jpg" alt="Omar Fahmy" />
+            <AvatarImage src="/lovable-uploads/b04ffcec-f1dd-46e7-844f-45ddc191035c.png" alt="Omar Fahmy" />
             <AvatarFallback className="bg-muted">OF</AvatarFallback>
           </Avatar>
         </motion.div>
