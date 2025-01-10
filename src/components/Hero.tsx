@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { TypeAnimation } from 'react-type-animation';
 
 export const Hero = () => {
   const scrollToConnect = () => {
@@ -15,6 +16,10 @@ export const Hero = () => {
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute w-96 h-96 -top-48 -left-48 bg-primary/20 rounded-full filter blur-3xl animate-float"></div>
         <div className="absolute w-96 h-96 -bottom-48 -right-48 bg-secondary/20 rounded-full filter blur-3xl animate-float" style={{ animationDelay: "-3s" }}></div>
+        
+        {/* Additional floating elements for continuous animation */}
+        <div className="absolute w-72 h-72 top-1/4 left-1/3 bg-accent/10 rounded-full filter blur-2xl animate-float" style={{ animationDelay: "-2s" }}></div>
+        <div className="absolute w-64 h-64 bottom-1/4 right-1/3 bg-primary/15 rounded-full filter blur-2xl animate-float" style={{ animationDelay: "-4s" }}></div>
       </div>
 
       <div className="text-center space-y-6 p-4 z-10 max-w-4xl">
@@ -30,23 +35,27 @@ export const Hero = () => {
           </Avatar>
         </motion.div>
 
-        <motion.h1 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
+        <TypeAnimation
+          sequence={[
+            'Omar Fahmy',
+            1000,
+          ]}
+          wrapper="h1"
+          speed={50}
+          repeat={0}
           className="text-5xl md:text-7xl font-bold text-foreground bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary"
-        >
-          Omar Fahmy
-        </motion.h1>
+        />
 
-        <motion.p 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3, delay: 0.2 }}
+        <TypeAnimation
+          sequence={[
+            'Mobile Application Developer',
+            1000,
+          ]}
+          wrapper="p"
+          speed={50}
+          repeat={0}
           className="text-xl md:text-2xl text-muted-foreground"
-        >
-          Mobile Application Developer
-        </motion.p>
+        />
         
         <motion.div
           initial={{ opacity: 0 }}

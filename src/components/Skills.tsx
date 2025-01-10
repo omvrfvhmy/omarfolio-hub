@@ -1,6 +1,7 @@
 import { Section } from "./Section";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
+import { motion } from "framer-motion";
 
 const technicalSkills = [
   "Flutter", "Dart", "Firebase", "REST APIs", "Git",
@@ -17,27 +18,57 @@ export const Skills = () => {
   return (
     <>
       <Section id="technical-skills" title="Technical Skills">
-        <Card className="p-6 glass-card">
-          <div className="flex flex-wrap gap-2">
-            {technicalSkills.map((skill) => (
-              <Badge key={skill} variant="secondary" className="text-sm">
-                {skill}
-              </Badge>
-            ))}
-          </div>
-        </Card>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <Card className="p-6 glass-card bg-gradient-to-br from-muted/30 to-muted/10 backdrop-blur-lg border-primary/20 shadow-lg hover:shadow-primary/20">
+            <div className="flex flex-wrap gap-2">
+              {technicalSkills.map((skill, index) => (
+                <motion.div
+                  key={skill}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: index * 0.05 }}
+                >
+                  <Badge variant="secondary" className="text-sm bg-primary/10 text-primary hover:bg-primary/20">
+                    {skill}
+                  </Badge>
+                </motion.div>
+              ))}
+            </div>
+          </Card>
+        </motion.div>
       </Section>
 
       <Section id="soft-skills" title="Non-Technical Skills">
-        <Card className="p-6 glass-card">
-          <div className="flex flex-wrap gap-2">
-            {softSkills.map((skill) => (
-              <Badge key={skill} variant="outline" className="text-sm">
-                {skill}
-              </Badge>
-            ))}
-          </div>
-        </Card>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          <Card className="p-6 glass-card bg-gradient-to-br from-muted/30 to-muted/10 backdrop-blur-lg border-primary/20 shadow-lg hover:shadow-primary/20">
+            <div className="flex flex-wrap gap-2">
+              {softSkills.map((skill, index) => (
+                <motion.div
+                  key={skill}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: index * 0.05 }}
+                >
+                  <Badge variant="outline" className="text-sm border-primary/20 hover:bg-primary/10">
+                    {skill}
+                  </Badge>
+                </motion.div>
+              ))}
+            </div>
+          </Card>
+        </motion.div>
       </Section>
     </>
   );

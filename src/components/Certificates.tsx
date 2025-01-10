@@ -1,6 +1,7 @@
 import { Section } from "./Section";
 import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
+import { motion } from "framer-motion";
 
 const certificates = [
   {
@@ -38,14 +39,22 @@ export const Certificates = () => {
     <Section id="certificates" title="Certificates & Courses">
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {certificates.map((cert, index) => (
-          <Card key={index} className="p-6 glass-card hover:scale-105 transition-transform">
-            <h3 className="text-lg font-semibold mb-2">{cert.title}</h3>
-            <p className="text-sm text-muted-foreground mb-2">{cert.issuer}</p>
-            <div className="flex justify-between items-center">
-              <Badge variant="outline">{cert.date}</Badge>
-              <span className="text-xs text-muted-foreground">ID: {cert.credential}</span>
-            </div>
-          </Card>
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+          >
+            <Card className="p-6 glass-card hover:scale-105 transition-transform bg-gradient-to-br from-muted/30 to-muted/10 backdrop-blur-lg border-primary/20 shadow-lg hover:shadow-primary/20">
+              <h3 className="text-lg font-semibold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">{cert.title}</h3>
+              <p className="text-sm text-muted-foreground mb-2">{cert.issuer}</p>
+              <div className="flex justify-between items-center">
+                <Badge variant="outline" className="border-primary/20 bg-primary/10">{cert.date}</Badge>
+                <span className="text-xs text-muted-foreground">ID: {cert.credential}</span>
+              </div>
+            </Card>
+          </motion.div>
         ))}
       </div>
     </Section>

@@ -1,5 +1,6 @@
 import { Section } from "./Section";
 import { Card } from "./ui/card";
+import { motion } from "framer-motion";
 
 const experiences = [
 
@@ -46,12 +47,19 @@ export const Experience = () => {
     <Section id="experience" title="Experience">
       <div className="grid gap-6 md:grid-cols-2">
         {experiences.map((exp, index) => (
-          <Card key={index} className="p-6 glass-card hover:scale-105 transition-transform">
-            <h3 className="text-xl font-semibold mb-2">{exp.title}</h3>
-            <p className="text-muted-foreground mb-2">{exp.company}</p>
-            <p className="text-sm text-muted-foreground mb-4">{exp.period}</p>
-          
-          </Card>
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+          >
+            <Card className="p-6 glass-card hover:scale-105 transition-transform bg-gradient-to-br from-muted/30 to-muted/10 backdrop-blur-lg border-primary/20 shadow-lg hover:shadow-primary/20">
+              <h3 className="text-xl font-semibold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">{exp.title}</h3>
+              <p className="text-muted-foreground mb-2">{exp.company}</p>
+              <p className="text-sm text-muted-foreground mb-4">{exp.period}</p>
+            </Card>
+          </motion.div>
         ))}
       </div>
     </Section>
