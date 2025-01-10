@@ -22,26 +22,26 @@ export default {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: "#0b0b0b",
+        background: "#1A1F2C",
         foreground: "#FFFFFF",
         primary: {
-          DEFAULT: "#75bc7b",
+          DEFAULT: "#9b87f5",
           foreground: "#FFFFFF",
         },
         secondary: {
-          DEFAULT: "#ffa589",
-          foreground: "#0b0b0b",
+          DEFAULT: "#0EA5E9",
+          foreground: "#1A1F2C",
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
         },
         muted: {
-          DEFAULT: "#2a2a2a",
-          foreground: "#a1a1a1",
+          DEFAULT: "#403E43",
+          foreground: "#8B5CF6",
         },
         accent: {
-          DEFAULT: "#75bc7b",
+          DEFAULT: "#8B5CF6",
           foreground: "#FFFFFF",
         },
       },
@@ -54,11 +54,19 @@ export default {
           "0%": { transform: "translateY(100px)", opacity: "0" },
           "100%": { transform: "translateY(0)", opacity: "1" },
         },
+        "glow": {
+          "0%, 100%": { boxShadow: "0 0 20px #9b87f5" },
+          "50%": { boxShadow: "0 0 40px #8B5CF6" },
+        }
       },
       animation: {
         "float": "float 6s ease-in-out infinite",
         "slide-up": "slide-up 0.6s ease-out forwards",
+        "glow": "glow 3s ease-in-out infinite",
       },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(circle at center, var(--tw-gradient-stops))',
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],

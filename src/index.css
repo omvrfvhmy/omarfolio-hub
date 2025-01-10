@@ -34,21 +34,21 @@
 }
 
 .glass-card {
-  @apply bg-muted bg-opacity-10 backdrop-filter backdrop-blur-lg border border-muted border-opacity-20 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300;
+  @apply bg-muted/10 backdrop-filter backdrop-blur-lg border border-primary/20 rounded-2xl shadow-xl hover:shadow-primary/30 transition-all duration-300;
 }
 
 .section-heading {
-  @apply text-3xl font-bold mb-6 text-primary animate-fade-in;
+  @apply text-4xl font-bold mb-8 text-center animate-fade-in;
 }
 
 .section-container {
-  @apply max-w-6xl mx-auto px-4 py-16 md:px-6 lg:px-8;
+  @apply max-w-6xl mx-auto px-4 py-24 md:px-6 lg:px-8;
 }
 
 /* Responsive Typography */
 @media (max-width: 640px) {
   .section-heading {
-    @apply text-2xl;
+    @apply text-3xl;
   }
 }
 

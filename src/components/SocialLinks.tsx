@@ -42,15 +42,19 @@ export const SocialLinks = () => {
   ];
 
   return (
-    <section id="social" className="section-container">
-      <h2 className="section-heading">Let's Connect</h2>
+    <section id="social" className="section-container relative">
+      <div className="absolute inset-0 bg-gradient-radial from-primary/5 via-transparent to-transparent pointer-events-none"></div>
+      <h2 className="section-heading bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">Let's Connect</h2>
       <div className="flex flex-wrap justify-center gap-6">
-        {socialLinks.map((link) => {
+        {socialLinks.map((link, index) => {
           const Icon = link.icon;
           return (
             <motion.div
               key={link.name}
-              whileHover={{ scale: 1.1 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+              whileHover={{ scale: 1.1, rotate: 5 }}
               whileTap={{ scale: 0.95 }}
               className="group"
             >
@@ -63,9 +67,9 @@ export const SocialLinks = () => {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="w-12 h-12 rounded-full"
+                  className="w-12 h-12 rounded-full bg-muted/10 backdrop-blur-sm border border-primary/20 hover:border-primary/50 hover:bg-primary/20 transition-all duration-300"
                 >
-                  <Icon className="w-6 h-6 transition-transform duration-300 group-hover:rotate-12" />
+                  <Icon className="w-6 h-6 transition-all duration-300 group-hover:text-primary group-hover:scale-110 group-hover:rotate-12" />
                 </Button>
               </a>
             </motion.div>
