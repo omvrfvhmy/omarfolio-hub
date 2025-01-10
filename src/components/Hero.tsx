@@ -24,7 +24,7 @@ export const Hero = () => {
           transition={{ duration: 0.5 }}
           className="mb-8"
         >
-          <Avatar className="w-32 h-32 mx-auto border-4 border-primary/50 animate-glow">
+          <Avatar className="w-48 h-48 mx-auto border-4 border-primary/50 animate-glow">
             <AvatarImage src="/omar-profile.jpg" alt="Omar Fahmy" />
             <AvatarFallback className="bg-muted">OF</AvatarFallback>
           </Avatar>

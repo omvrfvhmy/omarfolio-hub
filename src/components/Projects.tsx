@@ -3,6 +3,7 @@ import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { Github, Globe } from "lucide-react";
+import { motion } from "framer-motion";
 
 const projects = [
   {
@@ -25,31 +26,45 @@ const projects = [
 export const Projects = () => {
   return (
     <Section id="projects" title="Projects">
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
         {projects.map((project, index) => (
-          <Card key={index} className="p-6 glass-card flex flex-col">
-            <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-            <p className="text-sm text-muted-foreground mb-4 flex-grow">{project.description}</p>
-            <div className="flex flex-wrap gap-2 mb-4">
-              {project.technologies.map((tech) => (
-                <Badge key={tech} variant="secondary">{tech}</Badge>
-              ))}
-            </div>
-            <div className="flex gap-2">
-              <Button variant="outline" size="sm" asChild>
-                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                  <Github className="w-4 h-4 mr-2" />
-                  Code
-                </a>
-              </Button>
-              <Button variant="outline" size="sm" asChild>
-                <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                  <Globe className="w-4 h-4 mr-2" />
-                  Live
-                </a>
-              </Button>
-            </div>
-          </Card>
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            viewport={{ once: true }}
+          >
+            <Card className="p-6 glass-card hover:translate-y-[-8px] transition-all duration-300 bg-gradient-to-br from-muted/30 to-muted/10 backdrop-blur-lg border-primary/20">
+              <h3 className="text-2xl font-semibold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">{project.title}</h3>
+              <p className="text-sm text-muted-foreground mb-4 flex-grow">{project.description}</p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {project.technologies.map((tech) => (
+                  <Badge 
+                    key={tech} 
+                    variant="secondary"
+                    className="bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
+                  >
+                    {tech}
+                  </Badge>
+                ))}
+              </div>
+              <div className="flex gap-3">
+                <Button variant="outline" size="sm" asChild className="hover:bg-primary/10 transition-colors">
+                  <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                    <Github className="w-4 h-4 mr-2" />
+                    Code
+                  </a>
+                </Button>
+                <Button variant="outline" size="sm" asChild className="hover:bg-primary/10 transition-colors">
+                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                    <Globe className="w-4 h-4 mr-2" />
+                    Live
+                  </a>
+                </Button>
+              </div>
+            </Card>
+          </motion.div>
         ))}
       </div>
     </Section>
