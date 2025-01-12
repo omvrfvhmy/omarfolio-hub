@@ -45,6 +45,7 @@
     animation: float-bubble 20s infinite linear;
     pointer-events: none;
     z-index: -1;
+    will-change: transform;
   }
 
   .bubble:nth-child(1) {
@@ -70,10 +71,10 @@
 
   @keyframes float-bubble {
     0% {
-      transform: translateY(100vh) rotate(0deg);
+      transform: translateY(100vh) rotate(0deg) translateZ(0);
     }
     100% {
-      transform: translateY(-100vh) rotate(360deg);
+      transform: translateY(-100vh) rotate(360deg) translateZ(0);
     }
   }
 
@@ -89,6 +90,7 @@
     background: radial-gradient(circle, rgba(139, 92, 246, 0.3), transparent 70%);
     animation: cornerPulse 4s ease-in-out infinite alternate;
     z-index: -1;
+    will-change: transform, opacity;
   }
 
   body::before {
@@ -125,6 +127,7 @@
     pointer-events: none;
     z-index: 9999;
     transition: transform 0.1s ease;
+    will-change: transform;
   }
 
   .cursor-glow {
@@ -137,6 +140,7 @@
     z-index: 9998;
     transform: translate(-50%, -50%);
     transition: transform 0.3s ease;
+    will-change: transform;
   }
 }
 
@@ -231,8 +235,9 @@
 .scroll-hidden {
   opacity: 0;
   filter: blur(5px);
-  transform: translateY(100%);
-  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(50px);
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity, filter;
 }
 
 .scroll-show {
