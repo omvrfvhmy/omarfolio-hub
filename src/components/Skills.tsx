@@ -5,15 +5,13 @@ import { motion } from "framer-motion";
 
 const technicalSkills = [
   "Flutter", "Dart", "Firebase", "REST APIs", "Git",
-  "Clean Architecture", "State Management", "UI/UX Design", "MS Office , Google Spreadsheets",
+  "Clean Architecture", "State Management", "UI/UX Design","MS Office , Google Spreadsheets",
 ];
 
 const softSkills = [
   "Problem Solving", "Team Leadership", "Communication",
-  "Time Management", "Adaptability", "Critical Thinking (Technical)", 
-  "Product Management", "Teamwork", "Public Relations",
-  "Event Planning", "Marketing", "Community Development", 
-  "Critical Thinking (Business)",
+  "Time Management", "Adaptability", "Critical Thinking","Product Managment", 
+  "Teamwork","Public Relations","Event Planning","Marketing","Community Development", "Critical Thinking", 
 ];
 
 export const Skills = () => {
@@ -30,7 +28,7 @@ export const Skills = () => {
             <div className="flex flex-wrap gap-2">
               {technicalSkills.map((skill, index) => (
                 <motion.div
-                  key={`tech-${index}-${skill}`}
+                  key={skill}
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
@@ -57,7 +55,7 @@ export const Skills = () => {
             <div className="flex flex-wrap gap-2">
               {softSkills.map((skill, index) => (
                 <motion.div
-                  key={`soft-${index}-${skill}`}
+                  key={skill}
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}

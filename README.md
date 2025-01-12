@@ -1,24 +1,22 @@
-# Welcome to My project
+# Welcome to your Lovable project
 
-# Project info
-## Omar Fahmy Portfolio
+## Project info
 
-This repository contains my personal portfolio website, where you can explore my projects, skills, and experiences in the field of [your field or industry].
-
-Features
-	•	Overview of my background and skills
-	•	Showcasing of my projects and accomplishments
-	•	Contact information
+**URL**: https://lovable.dev/projects/2db6067e-54bb-4232-a38c-0bfea2afdd89
 
 ## How can I edit this code?
 
 There are several ways of editing your application.
 
+**Use Lovable**
 
+Simply visit the [Lovable Project](https://lovable.dev/projects/2db6067e-54bb-4232-a38c-0bfea2afdd89) and start prompting.
+
+Changes made via Lovable will be committed automatically to this repo.
 
 **Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes.
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
 
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
@@ -61,3 +59,11 @@ This project is built with .
 - React
 - shadcn-ui
 - Tailwind CSS
+
+## How can I deploy this project?
+
+Simply open [Lovable](https://lovable.dev/projects/2db6067e-54bb-4232-a38c-0bfea2afdd89) and click on Share -> Publish.
+
+## I want to use a custom domain - is that possible?
+
+We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)

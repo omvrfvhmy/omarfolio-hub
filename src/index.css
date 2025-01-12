@@ -21,182 +21,20 @@
     --ring: 134 37% 60%;
     --radius: 0.75rem;
   }
+}
 
+@layer base {
   * {
     @apply border-border;
-    cursor: none;
   }
-  
   body {
-    @apply bg-background text-foreground relative min-h-screen overflow-x-hidden;
+    @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
-    background: linear-gradient(
-      to bottom right,
-      rgba(155, 135, 245, 0.1),
-      rgba(14, 165, 233, 0.1)
-    );
-  }
-
-  /* Animated background bubbles */
-  .bubble {
-    position: fixed;
-    border-radius: 50%;
-    background: radial-gradient(circle at center, rgba(139, 92, 246, 0.2), transparent);
-    animation: float-bubble 20s infinite linear;
-    pointer-events: none;
-    z-index: -1;
-    will-change: transform;
-  }
-
-  .bubble:nth-child(1) {
-    width: 300px;
-    height: 300px;
-    left: 10%;
-    animation-delay: -2s;
-  }
-
-  .bubble:nth-child(2) {
-    width: 250px;
-    height: 250px;
-    left: 60%;
-    animation-delay: -4s;
-  }
-
-  .bubble:nth-child(3) {
-    width: 200px;
-    height: 200px;
-    left: 30%;
-    animation-delay: -6s;
-  }
-
-  @keyframes float-bubble {
-    0% {
-      transform: translateY(100vh) rotate(0deg) translateZ(0);
-    }
-    100% {
-      transform: translateY(-100vh) rotate(360deg) translateZ(0);
-    }
-  }
-
-  /* Corner gradients */
-  body::before,
-  body::after,
-  body > *:first-child::before,
-  body > *:first-child::after {
-    content: '';
-    position: fixed;
-    width: 300px;
-    height: 300px;
-    background: radial-gradient(circle, rgba(139, 92, 246, 0.3), transparent 70%);
-    animation: cornerPulse 4s ease-in-out infinite alternate;
-    z-index: -1;
-    will-change: transform, opacity;
-  }
-
-  body::before {
-    top: -100px;
-    left: -100px;
-    animation-delay: 0s;
-  }
-
-  body::after {
-    top: -100px;
-    right: -100px;
-    animation-delay: 1s;
-  }
-
-  body > *:first-child::before {
-    bottom: -100px;
-    left: -100px;
-    animation-delay: 2s;
-  }
-
-  body > *:first-child::after {
-    bottom: -100px;
-    right: -100px;
-    animation-delay: 3s;
-  }
-
-  /* Custom cursor */
-  .cursor {
-    width: 20px;
-    height: 20px;
-    background: rgba(139, 92, 246, 0.3);
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 9999;
-    transition: transform 0.1s ease;
-    will-change: transform;
-  }
-
-  .cursor-glow {
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle, rgba(139, 92, 246, 0.15), transparent 70%);
-    border-radius: 50%;
-    position: fixed;
-    pointer-events: none;
-    z-index: 9998;
-    transform: translate(-50%, -50%);
-    transition: transform 0.3s ease;
-    will-change: transform;
   }
 }
 
-@keyframes cornerPulse {
-  0% {
-    opacity: 0.3;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 0.6;
-    transform: scale(1.2);
-  }
-}
-
-/* Floating orbs animation */
-@keyframes moveGradient {
-  0% {
-    transform: translate(0, 0) rotate(0deg);
-  }
-  50% {
-    transform: translate(100px, 100px) rotate(180deg);
-  }
-  100% {
-    transform: translate(-100px, -100px) rotate(360deg);
-  }
-}
-
-/* Additional floating elements */
-.floating-orb {
-  @apply fixed w-96 h-96 rounded-full filter blur-[60px] opacity-20;
-  z-index: -1;
-  animation: float 10s ease-in-out infinite;
-}
-
-.floating-orb-1 {
-  @apply top-1/4 left-1/3 bg-accent/30;
-  animation-delay: -2s;
-}
-
-.floating-orb-2 {
-  @apply bottom-1/4 right-1/3 bg-primary/30;
-  animation-delay: -4s;
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-50px) rotate(10deg);
-  }
-}
-
-/* Glass effect utilities */
 .glass-card {
-  @apply bg-white/5 backdrop-filter backdrop-blur-lg border border-white/10 rounded-2xl shadow-xl;
+  @apply bg-muted/10 backdrop-filter backdrop-blur-lg border border-primary/20 rounded-2xl shadow-xl hover:shadow-primary/30 transition-all duration-300;
 }
 
 .section-heading {
@@ -207,41 +45,46 @@
   @apply max-w-6xl mx-auto px-4 py-24 md:px-6 lg:px-8;
 }
 
-/* Add the floating orbs to the root element */
-#root::before,
-#root::after {
-  content: '';
-  @apply fixed w-96 h-96 rounded-full filter blur-[80px] opacity-20;
-  z-index: -1;
+/* Responsive Typography */
+@media (max-width: 640px) {
+  .section-heading {
+    @apply text-3xl;
+  }
 }
 
-#root::before {
-  @apply bg-gradient-to-r from-primary/30 to-accent/30;
-  top: 25%;
-  left: 33%;
-  animation: float 10s ease-in-out infinite;
-  animation-delay: -2s;
+/* Animation Classes */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
 }
 
-#root::after {
-  @apply bg-gradient-to-l from-secondary/30 to-primary/30;
-  bottom: 25%;
-  right: 33%;
-  animation: float 10s ease-in-out infinite;
-  animation-delay: -4s;
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px theme('colors.primary.DEFAULT');
+  }
+  50% {
+    box-shadow: 0 0 40px theme('colors.accent.DEFAULT');
+  }
 }
 
-/* Scroll-triggered animations */
-.scroll-hidden {
-  opacity: 0;
-  filter: blur(5px);
-  transform: translateY(50px);
-  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: transform, opacity, filter;
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }
 
-.scroll-show {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateY(0);
+.animate-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+/* Glass effect utilities */
+.glass-effect {
+  @apply backdrop-blur-lg bg-white/10 border border-white/20;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
 }
