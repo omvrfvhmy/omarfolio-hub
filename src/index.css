@@ -27,48 +27,81 @@
   * {
     @apply border-border;
   }
+  
   body {
     @apply bg-background text-foreground relative min-h-screen overflow-x-hidden;
     font-feature-settings: "rlig" 1, "calt" 1;
+    background: linear-gradient(
+      to bottom right,
+      rgba(155, 135, 245, 0.1),
+      rgba(14, 165, 233, 0.1)
+    );
   }
 
-  /* Dynamic background elements */
+  /* Large gradient orbs */
   body::before,
   body::after {
-    @apply content-[''] fixed w-96 h-96 rounded-full filter blur-3xl animate-float;
+    @apply content-[''] fixed w-[800px] h-[800px] rounded-full filter blur-[100px] opacity-30;
     z-index: -1;
+    animation: moveGradient 20s ease infinite alternate;
   }
 
   body::before {
-    @apply -top-48 -left-48 bg-primary/20;
+    @apply bg-gradient-to-r from-primary/40 to-accent/40;
+    top: -400px;
+    left: -200px;
   }
 
   body::after {
-    @apply -bottom-48 -right-48 bg-secondary/20;
-    animation-delay: -3s;
+    @apply bg-gradient-to-l from-secondary/40 to-primary/40;
+    bottom: -400px;
+    right: -200px;
+    animation-delay: -10s;
+  }
+}
+
+/* Floating orbs animation */
+@keyframes moveGradient {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(100px, 100px) rotate(180deg);
+  }
+  100% {
+    transform: translate(-100px, -100px) rotate(360deg);
   }
 }
 
 /* Additional floating elements */
 .floating-orb {
-  @apply fixed w-72 h-72 rounded-full filter blur-2xl;
+  @apply fixed w-96 h-96 rounded-full filter blur-[60px] opacity-20;
   z-index: -1;
+  animation: float 10s ease-in-out infinite;
 }
 
 .floating-orb-1 {
-  @apply top-1/4 left-1/3 bg-accent/10;
-  animation: float 6s ease-in-out infinite;
+  @apply top-1/4 left-1/3 bg-accent/30;
   animation-delay: -2s;
 }
 
 .floating-orb-2 {
-  @apply bottom-1/4 right-1/3 bg-primary/15;
-  animation: float 6s ease-in-out infinite;
+  @apply bottom-1/4 right-1/3 bg-primary/30;
   animation-delay: -4s;
 }
 
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-50px) rotate(10deg);
+  }
+}
+
+/* Glass effect utilities */
 .glass-card {
-  @apply bg-muted/10 backdrop-filter backdrop-blur-lg border border-primary/20 rounded-2xl shadow-xl hover:shadow-primary/30 transition-all duration-300;
+  @apply bg-white/5 backdrop-filter backdrop-blur-lg border border-white/10 rounded-2xl shadow-xl;
 }
 
 .section-heading {
@@ -79,63 +112,26 @@
   @apply max-w-6xl mx-auto px-4 py-24 md:px-6 lg:px-8;
 }
 
-/* Responsive Typography */
-@media (max-width: 640px) {
-  .section-heading {
-    @apply text-3xl;
-  }
-}
-
-/* Animation Classes */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-20px) rotate(5deg);
-  }
-}
-
-@keyframes glow {
-  0%, 100% {
-    box-shadow: 0 0 20px theme('colors.primary.DEFAULT');
-  }
-  50% {
-    box-shadow: 0 0 40px theme('colors.accent.DEFAULT');
-  }
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-.animate-glow {
-  animation: glow 3s ease-in-out infinite;
-}
-
-/* Glass effect utilities */
-.glass-effect {
-  @apply backdrop-blur-lg bg-white/10 border border-white/20;
-}
-
-/* Gradient text utility */
-.gradient-text {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
-}
-
-/* Add the floating orbs to the body */
-#root::before {
+/* Add the floating orbs to the root element */
+#root::before,
+#root::after {
   content: '';
-  @apply fixed w-72 h-72 top-1/4 left-1/3 bg-accent/10 rounded-full filter blur-2xl;
-  animation: float 6s ease-in-out infinite;
-  animation-delay: -2s;
+  @apply fixed w-96 h-96 rounded-full filter blur-[80px] opacity-20;
   z-index: -1;
+}
+
+#root::before {
+  @apply bg-gradient-to-r from-primary/30 to-accent/30;
+  top: 25%;
+  left: 33%;
+  animation: float 10s ease-in-out infinite;
+  animation-delay: -2s;
 }
 
 #root::after {
-  content: '';
-  @apply fixed w-64 h-64 bottom-1/4 right-1/3 bg-primary/15 rounded-full filter blur-2xl;
-  animation: float 6s ease-in-out infinite;
+  @apply bg-gradient-to-l from-secondary/30 to-primary/30;
+  bottom: 25%;
+  right: 33%;
+  animation: float 10s ease-in-out infinite;
   animation-delay: -4s;
-  z-index: -1;
 }
