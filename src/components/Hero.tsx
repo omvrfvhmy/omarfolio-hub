@@ -11,15 +11,20 @@ export const Hero = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden bg-gradient-radial from-background via-background/90 to-background">
+    <div className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute w-96 h-96 -top-48 -left-48 bg-primary/20 rounded-full filter blur-3xl animate-float"></div>
-        <div className="absolute w-96 h-96 -bottom-48 -right-48 bg-secondary/20 rounded-full filter blur-3xl animate-float" style={{ animationDelay: "-3s" }}></div>
+        {/* Primary gradient orbs */}
+        <div className="absolute w-[500px] h-[500px] -top-64 -left-64 bg-primary/30 rounded-full filter blur-3xl animate-float"></div>
+        <div className="absolute w-[500px] h-[500px] -bottom-64 -right-64 bg-secondary/30 rounded-full filter blur-3xl animate-float" style={{ animationDelay: "-3s" }}></div>
         
-        {/* Additional floating elements for continuous animation */}
-        <div className="absolute w-72 h-72 top-1/4 left-1/3 bg-accent/10 rounded-full filter blur-2xl animate-float" style={{ animationDelay: "-2s" }}></div>
-        <div className="absolute w-64 h-64 bottom-1/4 right-1/3 bg-primary/15 rounded-full filter blur-2xl animate-float" style={{ animationDelay: "-4s" }}></div>
+        {/* Secondary floating elements */}
+        <div className="absolute w-96 h-96 top-1/3 left-1/4 bg-accent/20 rounded-full filter blur-2xl animate-float" style={{ animationDelay: "-2s" }}></div>
+        <div className="absolute w-96 h-96 bottom-1/3 right-1/4 bg-primary/20 rounded-full filter blur-2xl animate-float" style={{ animationDelay: "-4s" }}></div>
+        
+        {/* Additional animated elements */}
+        <div className="absolute w-72 h-72 top-1/2 left-1/2 bg-secondary/20 rounded-full filter blur-xl animate-float" style={{ animationDelay: "-1s" }}></div>
+        <div className="absolute w-64 h-64 bottom-1/4 left-1/3 bg-accent/10 rounded-full filter blur-xl animate-float" style={{ animationDelay: "-5s" }}></div>
       </div>
 
       <div className="text-center space-y-6 p-4 z-10 max-w-4xl">
