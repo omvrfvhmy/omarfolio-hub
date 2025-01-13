@@ -57,12 +57,17 @@ export default {
         "glow": {
           "0%, 100%": { boxShadow: "0 0 20px #9b87f5" },
           "50%": { boxShadow: "0 0 40px #8B5CF6" },
+        },
+        "pulse": {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.5" },
         }
       },
       animation: {
         "float": "float 6s ease-in-out infinite",
         "slide-up": "slide-up 0.6s ease-out forwards",
         "glow": "glow 3s ease-in-out infinite",
+        "pulse": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(circle at center, var(--tw-gradient-stops))',

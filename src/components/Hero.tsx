@@ -12,6 +12,13 @@ export const Hero = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
+      {/* Animated gradient background */}
+      <div className="absolute inset-0 bg-gradient-radial from-background via-background to-background">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(155,135,245,0.1),rgba(155,135,245,0)_50%)] animate-pulse"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(14,165,233,0.15),rgba(14,165,233,0)_50%)] animate-pulse" style={{ animationDelay: '-2s' }}></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.1),rgba(139,92,246,0)_50%)] animate-pulse" style={{ animationDelay: '-4s' }}></div>
+      </div>
+
       <div className="text-center space-y-6 p-4 z-10 max-w-4xl">
         <motion.div 
           initial={{ opacity: 0, scale: 0.5 }}
