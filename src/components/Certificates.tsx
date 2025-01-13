@@ -4,12 +4,7 @@ import { Badge } from "./ui/badge";
 import { motion } from "framer-motion";
 
 const certificates = [
-  {
-    title: "Best graduate from Mobile application development track",
-    issuer: "HackerRank, AUFC",
-    date: "2023",
-    credential: "N/A",
-  },
+ 
 
   {
     title: "The complete Dart Learning Guide",
@@ -33,6 +28,18 @@ const certificates = [
     credential: "f574a033d0a58ab6d7c8f0b1ac0af77f07845d73",
   },
 
+  {
+    title: "Best graduate from Mobile application development track",
+    issuer: "HackerRank, AUFC",
+    date: "2022",
+    credential: "N/A",
+  },
+  {
+    title: "Certificate of Completion HackerRank AUFS Head of Academic Committee ",
+    issuer: "HackerRank, AUFC",
+    date: "2023",
+    credential: "N/A",
+  },
   {
     title: "Certificate of Completion 2023 - 2024 GDSC Second Lead",
     issuer: "Google DSC",
