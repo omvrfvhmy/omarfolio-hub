@@ -25,6 +25,14 @@ const certificates = [
     credential: "UC-9a56593a-530e-4b59-8c68-96e77fcf7151",
   },
 
+ 
+  {
+    title: "Introduction to Python",
+    issuer: "DataCamp",
+    date: "2025",
+    credential: "f574a033d0a58ab6d7c8f0b1ac0af77f07845d73",
+  },
+
   {
     title: "Certificate of Completion 2023 - 2024 GDSC Second Lead",
     issuer: "Google DSC",
