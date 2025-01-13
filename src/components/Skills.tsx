@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 import { motion } from "framer-motion";
 
 const technicalSkills = [
-  "Flutter", "Dart", "Firebase", "REST APIs", "Git",
+  "Flutter", "Dart", "Firebase", "REST APIs", "Git", "Python"
   "Clean Architecture", "State Management", "UI/UX Design","MS Office , Google Spreadsheets",
 ];
 
