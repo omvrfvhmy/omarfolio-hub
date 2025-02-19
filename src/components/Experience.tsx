@@ -5,6 +5,12 @@ import { motion } from "framer-motion";
 const experiences = [
 
   {
+    title: "Founder& CEO",
+    company: "Integr8",
+    period: "2025-Present",
+  },
+
+  {
     title: "Program Manager& EventPlanner& Organizer",
     company: "Google Developer Groups New Cairo",
     period: "2024- Present",
@@ -13,7 +19,7 @@ const experiences = [
   {
     title: "Founder& Campus Director",
     company: "Hult Prize at BHI",
-    period: "2023- Present",
+    period: "2023- 2025",
   },
 
   {
