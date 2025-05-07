@@ -11,6 +11,12 @@ const experiences = [
   },
 
   {
+    title: "Operations Manager& PR Sponsor",
+    company: "Remooz",
+    period: "2025",
+  },
+
+  {
     title: "Program Manager& EventPlanner& Organizer",
     company: "Google Developer Groups New Cairo",
     period: "2024- Present",
